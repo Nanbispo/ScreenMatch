@@ -1,5 +1,6 @@
 package com.alura.screenMatch;
 
+import com.alura.screenMatch.services.consumeAPI;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,5 +14,8 @@ public class ScreenMatchApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		var consumeApi = new consumeAPI();
+		var json = consumeApi.getData("https://www.omdbapi.com/?t=gilmore+girls&apikey=b12a8783");
+		System.out.println(json);
 	}
 }
