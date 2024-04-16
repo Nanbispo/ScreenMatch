@@ -24,9 +24,6 @@ public class consumeAPI {
         String json = response.body();
         return json;
     }
-
-    public void main() {
-    }
 }
 
 
